@@ -266,6 +266,9 @@ from SimGeneral.MixingModule.fullMixCustomize_cff import setCrossingFrameOn
 #call to customisation function setCrossingFrameOn imported from SimGeneral.MixingModule.fullMixCustomize_cff
 process = setCrossingFrameOn(process)
 
+from SimCalorimetry.HGCalSimProducers.hgcalDigitizer_cfi import *
+process = HGCal_disableNoise(process)
+
 # End of customisation functions
 #do not add changes to your config after this point (unless you know what you are doing)
 from FWCore.ParameterSet.Utilities import convertToUnscheduled
